@@ -1,4 +1,4 @@
-Before running the scripts, you need to downoad the ethereum database and the sqlite jdbc jar.
+Before running the trans_circles.py script, you need to downoad the ethereum database and the sqlite jdbc jar.
 
 1. Download the sqlite database
 
@@ -12,4 +12,8 @@ Before running the scripts, you need to downoad the ethereum database and the sq
    
 To run a script, the following command:
 
-spark-submit --jars sqlite-jdbc-3.36.0.3.jar --driver-memory 4g --executor-memory 4g
+spark-submit --jars sqlite-jdbc-3.36.0.3.jar --driver-memory 4g --executor-memory 4g trans_circles.py
+
+To run  the nft.py script just run:
+
+time spark-submit --master yarn --deploy-mode cluster --conf spark.dynamicAllocation.maxExecutors=10 nft.py
